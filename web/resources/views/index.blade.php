@@ -181,7 +181,7 @@ dengan 100 Anggota Warga
     <div class="info_container layout_padding2">
       <div class="container">
         <div class="info_logo">
-          <a class="navbar-brand" href="index.html"> San Dramaga Village Residence </a>
+          <a class="navbar-brand" href="index.html"> San Dramaga Village </a>
         </div>
         <div class="info_main">
           <div class="row">
