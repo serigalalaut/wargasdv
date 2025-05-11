@@ -14,7 +14,11 @@ class SdvController extends Controller
 
     public function payment()
     {
-        return view('payment');
+        $phone = env('phone');
+        $norek = env('norek');
+        $namerek = env('namerek');
+       
+        return view('payment', ['phone' => $phone, 'norek' => $norek, 'namerek' => $namerek]);
     }
     
 }

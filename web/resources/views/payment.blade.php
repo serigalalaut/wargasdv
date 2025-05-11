@@ -136,15 +136,15 @@
                                 <h6 style="font-weight: bold;">QRIS DANA</h6>
                                 <p>Simpan Gambar dan Scan QR di Dana</p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BCA</h6>
-                                <p>Masukan nomor Virtual Account 3901 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('3901 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 3901 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('3901 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BRI</h6>
-                                <p>Masukan nomor Virtual Account 88810 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('88810 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 88810 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('88810 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BNI</h6>
-                                <p>Masukan nomor Virtual Account 8810 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('8810 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 8810 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('8810 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via MANDIRI</h6>
-                                <p>Masukan nomor Virtual Account 89508 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('89508 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 89508 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('89508 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BSI</h6>
-                                <p>Masukan nomor Virtual Account 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$phone}}')" style="cursor: pointer;"></i></p>
 
                                 <p>
                                     <div class="detail-box">            
@@ -169,15 +169,15 @@
                                 <h6 style="font-weight: bold;">QRIS Gopay</h6>
                                 <p>Simpan Gambar dan Scan QR di Gopay</p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BCA</h6>
-                                <p>Masukan nomor Virtual Account 70001 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('3901 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 70001 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('70001 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BRI</h6>
-                                <p>Masukan nomor Virtual Account 301341 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('88810 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 301341 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('301341 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BNI</h6>
-                                <p>Masukan nomor Virtual Account 9003 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('8810 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 9003 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('9003 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via MANDIRI</h6>
-                                <p>Masukan nomor Virtual Account 60737 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('89508 081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account 60737 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('60737 {{$phone}}')" style="cursor: pointer;"></i></p>
                                 <h6 style="font-weight: bold;">Virtual Account / Top Up Via BSI</h6>
-                                <p>Masukan nomor Virtual Account 081385548571 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('081385548571')" style="cursor: pointer;"></i></p>
+                                <p>Masukan nomor Virtual Account {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$phone}}')" style="cursor: pointer;"></i></p>
 
                                 <p>
                                     <div class="detail-box">            
@@ -198,10 +198,10 @@
                         <div id="flush-collapseThree" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <p>
-                                    <b>Nama Rekening</b> : PT. San Dramaga Village Residence
+                                    <b>Nama Rekening</b> : {{$namerek}}
                                 </p>
                                 <p>
-                                    <b>Nomor Rekening</b> : 1234567890 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('1234567890')" style="cursor: pointer;"></i>
+                                    <b>Nomor Rekening</b> : {{$norek}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$norek}}')" style="cursor: pointer;"></i>
                                     
                                 </p>
                                 <p>
@@ -227,10 +227,10 @@
                             <div class="accordion-body">
                             <div class="accordion-body">
                                 <p>
-                                    <b>Nama Rekening</b> : PT. San Dramaga Village Residence
+                                    <b>Nama Rekening</b> : {{$namerek}}
                                 </p>
                                 <p>
-                                    <b>Nomor Rekening</b> : 1234567890 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('1234567890')" style="cursor: pointer;"></i>
+                                    <b>Nomor Rekening</b> : {{$norek}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$norek}}')" style="cursor: pointer;"></i>
                                     
                                 </p>
                                 <p>
@@ -305,7 +305,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call +01 {{$norek}}
                       </span>
                     </a>
                   </li>
@@ -313,7 +313,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call +01 {{$norek}}
                       </span>
                     </a>
                   </li>
@@ -332,7 +332,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call +01 {{$norek}}
                       </span>
                     </a>
                   </li>
@@ -340,7 +340,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call +01 {{$norek}}
                       </span>
                     </a>
                   </li>
