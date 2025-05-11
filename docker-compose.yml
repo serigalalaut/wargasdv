@@ -1,0 +1,31 @@
+version : '3'
+networks:
+  sdv-net:
+    external:
+      name: sdv-net
+services:
+  wargasdv-nginx:
+      image: nginx:stable
+      container_name: wargasdv-nginx
+      ports:
+        - "3000:80"
+      depends_on:
+      - wargasdv-php
+      volumes:
+        - ./web/:/var/www/html/
+        - ./wargasdv.conf:/etc/nginx/conf.d/default.conf
+      external_links:
+        - web
+      networks:
+        - sdv-net
+  wargasdv-php:
+      build: ./php
+      container_name: wargasdv-php
+      expose:
+      - "3000"
+      volumes:
+        - ./web/:/var/www/html/
+      networks:
+        - sdv-net
+      
+  
