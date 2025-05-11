@@ -148,7 +148,7 @@
 
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="">
+                                        <a href="https://admin.wargasdv.com/payment?type=dana">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -181,7 +181,7 @@
 
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="">
+                                        <a href="https://admin.wargasdv.com/payment?type=gopay">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -209,7 +209,7 @@
                                 </p>
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="">
+                                        <a href="https://admin.wargasdv.com/payment?type=bca">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -238,7 +238,7 @@
                                 </p>
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="">
+                                        <a href="https://admin.wargasdv.com/payment?type=bsi">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
