@@ -6,7 +6,7 @@
     <header class="header_section">
       <div class="header_top">
         <div class="container-fluid header_top_container"> 
-          <a class="navbar-brand " href="index.html"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"></a>
+          <a class="navbar-brand " href="/"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"></a>
           <div class="contact_nav">
             <a href="">
               
@@ -28,7 +28,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand navbar_brand_mobile" href="index.html"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"> </a>
+            <a class="navbar-brand navbar_brand_mobile" href="/"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"> </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
@@ -181,7 +181,7 @@ dengan 100 Anggota Warga
     <div class="info_container layout_padding2">
       <div class="container">
         <div class="info_logo">
-          <a class="navbar-brand" href="index.html"> San Dramaga Village </a>
+          <a class="navbar-brand" href="/"> San Dramaga Village </a>
         </div>
         <div class="info_main">
           <div class="row">

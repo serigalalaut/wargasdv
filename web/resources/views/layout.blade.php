@@ -11,6 +11,7 @@
   <meta name="keywords" content="san dramaga village, warga san dramaga village, paguyuban warga san dramaga village, paguyuban warga sdv" />
   <meta name="description" content="portal paguyuban warga san dramaga village, portal pembayaran iuran warga san dramaga village" />
   <meta name="author" content="Paguyuban Warga San Dramaga Village" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo_sdv.jpeg') }}">
 
   <title>Paguyuban San Dramaga Village Residence</title>
 
