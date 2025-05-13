@@ -143,7 +143,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: #fff;">
                             <img src="{{ asset('assets/images/logo_dana.png') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Qris DANA
                             </button>
                             
@@ -153,18 +153,8 @@
                                 <h3 style="font-weight: bold; color: #fecf39;">Tata Cara Pembayaran</h3>
                                 <br>
                                 <h6 style="font-weight: bold;">QRIS DANA</h6>
-                                <p>Simpan Gambar dan Scan QR di Dana</p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BCA</h6>
-                                <p>Masukan nomor Virtual Account 3901 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('3901 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BRI</h6>
-                                <p>Masukan nomor Virtual Account 88810 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('88810 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BNI</h6>
-                                <p>Masukan nomor Virtual Account 8810 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('8810 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via MANDIRI</h6>
-                                <p>Masukan nomor Virtual Account 89508 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('89508 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BSI</h6>
-                                <p>Masukan nomor Virtual Account {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$phone}}')" style="cursor: pointer;"></i></p>
-
+                                <p>Scan QR di Aplikasi Dana</p>
+                                <p><img src="{{ asset('assets/images/dana.jpeg') }}" alt="" width="100%"></p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=dana">
@@ -177,7 +167,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="background-color: #fff;">
                             <img src="{{ asset('assets/images/logo_gopay.png') }}" alt="" width="50" height="22" style="margin-right: 10px;"> Qris Gopay
                             </button>
                         </h2>
@@ -186,18 +176,8 @@
                         <h3 style="font-weight: bold; color: #fecf39;">Tata Cara Pembayaran</h3>
                                 <br>
                                 <h6 style="font-weight: bold;">QRIS Gopay</h6>
-                                <p>Simpan Gambar dan Scan QR di Gopay</p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BCA</h6>
-                                <p>Masukan nomor Virtual Account 70001 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('70001 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BRI</h6>
-                                <p>Masukan nomor Virtual Account 301341 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('301341 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BNI</h6>
-                                <p>Masukan nomor Virtual Account 9003 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('9003 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via MANDIRI</h6>
-                                <p>Masukan nomor Virtual Account 60737 {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('60737 {{$phone}}')" style="cursor: pointer;"></i></p>
-                                <h6 style="font-weight: bold;">Virtual Account / Top Up Via BSI</h6>
-                                <p>Masukan nomor Virtual Account {{$phone}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$phone}}')" style="cursor: pointer;"></i></p>
-
+                                <p>Scan QR di AplikasiGopay</p>
+                                <p><img src="{{ asset('assets/images/gopay.jpeg') }}" alt="" width="100%"></p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=gopay">
@@ -210,8 +190,8 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            <img src="{{ asset('assets/images/bca.webp') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Transfer Bank BCA
+                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #fff;">
+                            <img src="{{ asset('assets/images/jago.jpg') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Transfer Bank Jago
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -228,7 +208,7 @@
                                 </p>
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=bca">
+                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=jago">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -238,7 +218,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="background-color: #fff;">
                             <img src="{{ asset('assets/images/logo_bsi.png') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Transfer Bank BSI
                             </button>
                         </h2>
@@ -267,7 +247,7 @@
                         </div>
                         <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingFive">
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" style="background-color: #fff;">
                             <img src="{{ asset('assets/images/code.jpg') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Bayar Cash
                             </button>
                         </h2>
@@ -381,10 +361,12 @@
         font-size: large;
         height: 50px;
         text-align: left;
-        border: none;
         margin-bottom: -6px;
         font-weight: 600;
         padding-left: 20px;
+        border-color: #f0f0f0;
+        border-bottom: none;
+        border-right: none;
     }
 
     .payment-list:hover{
