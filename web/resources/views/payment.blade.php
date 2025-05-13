@@ -294,7 +294,7 @@
               </p>
             </div>
             
-            <div class="col-md-3 col-lg-3">
+            <div class="col-md-3 col-lg-5">
               <div class="info_link-box">
                 <h5>
                   Kontak Darurat
@@ -304,7 +304,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call 1234
+                        Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02517589113')" style="cursor: pointer;"></i>
                       </span>
                     </a>
                   </li>
@@ -312,7 +312,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call 1234
+                      Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02518624107')" style="cursor: pointer;"></i>
                       </span>
                     </a>
                   </li>
@@ -321,31 +321,7 @@
               </div>
             </div>
 
-            <div class="col-md-3 col-lg-3">
-              <div class="info_link-box">
-                <h5 style="color: #252525;">
-                  Kontak Darurat
-                </h5>
-                <ul>
-                  <li class=" active">
-                    <a href="#" class="link-box">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                      <span>
-                        Call 1234
-                      </span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="#" class="link-box">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                      <span>
-                        Call 1234
-                      </span>
-                    </a>
-                  </li>
-                  
-                </ul>
-              </div>
+            
             </div>
           </div>
         </div>
