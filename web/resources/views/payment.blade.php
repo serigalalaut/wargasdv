@@ -301,18 +301,18 @@
                 </h5>
                 <ul>
                   <li class=" active">
-                    <a href="#" class="link-box">
+                    <a class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02517589113')" style="cursor: pointer;"></i>
+                        Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboardTelp('02517589113')" style="cursor: pointer;"></i>
                       </span>
                     </a>
                   </li>
                   <li class="">
-                    <a href="#" class="link-box">
+                    <a class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                      Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02518624107')" style="cursor: pointer;"></i>
+                      Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboardTelp('02518624107')" style="cursor: pointer;"></i>
                       </span>
                     </a>
                   </li>
@@ -373,6 +373,14 @@
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(function() {
             alert('Nomor rekening berhasil disalin: ' + text);
+        }, function(err) {
+            console.error('Gagal menyalin teks: ', err);
+        });
+    }
+
+    function copyToClipboardTelp(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Nomor telepon berhasil disalin: ' + text);
         }, function(err) {
             console.error('Gagal menyalin teks: ', err);
         });

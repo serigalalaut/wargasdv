@@ -157,20 +157,20 @@
                 </h5>
                 <ul>
                 <li class=" active">
-                    <a href="#" class="link-box">
+                    <div class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
                         Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02517589113')" style="cursor: pointer;"></i>
                       </span>
-                    </a>
+                    </div>
                   </li>
                   <li class="">
-                    <a href="#" class="link-box">
+                    <div class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
                       Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02518624107')" style="cursor: pointer;"></i>
                       </span>
-                    </a>
+                    </div>
                   </li>
                   
                 </ul>
@@ -225,7 +225,7 @@
   <script>
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(function() {
-            alert('Nomor rekening berhasil disalin: ' + text);
+            alert('Nomor telepon berhasil disalin: ' + text);
         }, function(err) {
             console.error('Gagal menyalin teks: ', err);
         });
