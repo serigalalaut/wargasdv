@@ -65,7 +65,7 @@
   <section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
-        <h2>Laporan Keuangan <span> San Dramaga Village Residence</span></h2>
+        <h2>Laporan Keuangan <span> San Dramaga Village</span></h2>
       </div>
       <br><br>
       <div class="row">

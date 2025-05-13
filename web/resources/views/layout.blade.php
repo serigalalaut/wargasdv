@@ -13,7 +13,7 @@
   <meta name="author" content="Paguyuban Warga San Dramaga Village" />
   <link rel="icon" type="image/png" href="{{ asset('assets/images/logo_sdv.jpeg') }}">
 
-  <title>Paguyuban San Dramaga Village Residence</title>
+  <title>Paguyuban San Dramaga Village</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}" />
@@ -42,7 +42,7 @@
  <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayYear"></span> Paguyuban Warga San Dramaga Village Residence </a>
+        &copy; <span id="displayYear"></span> Paguyuban Warga San Dramaga Village </a>
       </p>
     </div>
   </footer>

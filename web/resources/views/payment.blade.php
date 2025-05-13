@@ -65,7 +65,7 @@
   <section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
-        <h2>Portal Pembayaran IPL Warga<span> San Dramaga Village Residence</span></h2>
+        <h2>Portal Pembayaran IPL Warga<span> San Dramaga Village</span></h2>
       </div>
       <br><br>
       <div class="row">
@@ -111,7 +111,7 @@
                                 <td style="padding:10px 0px 0px 10px;">Rp. <strong>25.000</strong></td>
                             </tr>
                             <tr>
-                                <td style="padding:10px 0px 20px 0px;">Kas Paguyuban</td>
+                                <td style="padding:10px 0px 20px 0px;">Kas Warga</td>
                                 <td style="padding:10px 0px 20px 0px;">:</td>
                                 <td></td>
                                 <td style="padding:10px 0px 20px 10px;">Rp. <strong>10.000</strong></td>
