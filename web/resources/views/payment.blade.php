@@ -41,10 +41,10 @@
                   <a class="nav-link" href="/">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/payment">Pembayaran IPL</a>
+                  <a class="nav-link" href="/ipl">Pembayaran IPL</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Laporan Keuangan</a>
+                  <a class="nav-link" href="/laporan">Laporan</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Kontak Darurat</a>
@@ -69,6 +69,25 @@
       </div>
       <br><br>
       <div class="row">
+      <div class="col-sm-6 col-md-12">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Iuran Pengelolaan Lingkungan Bulan {{ date('F Y') }}
+              </h5>
+              <br>
+              <p>
+              <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
+              <br>
+              Warga sudah yang membayar <strong>{{$total_warga}} KK</strong><br>
+              warga yang belum membayar <strong>{{ env('total_warga') - $total_warga }} KK</strong>
+            </p>
+            </div>
+          </div>
+        </div>
         <div class="col-sm-6 col-md-6" style="margin-top: 10px;">
             <div class="card">
                 <div class="card-header" style="background-color: #fecf39; color: white; font-weight: 600;font-size: 20px;">
@@ -148,7 +167,7 @@
 
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment?type=dana">
+                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=dana">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -181,7 +200,7 @@
 
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment?type=gopay">
+                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=gopay">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -209,7 +228,7 @@
                                 </p>
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment?type=bca">
+                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=bca">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -238,7 +257,7 @@
                                 </p>
                                 <p>
                                     <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment?type=bsi">
+                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=bsi">
                                             Konfirmasi Pembayaran
                                         </a>
                                     </div>
@@ -305,7 +324,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 {{$norek}}
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -313,7 +332,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 {{$norek}}
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -332,7 +351,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 {{$norek}}
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -340,7 +359,7 @@
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 {{$norek}}
+                        Call 1234
                       </span>
                     </a>
                   </li>

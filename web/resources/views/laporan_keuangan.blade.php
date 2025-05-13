@@ -1,12 +1,13 @@
 @extends('layout')
 
 @section('content')
-  <div class="hero_area">
+
+<div class="hero_areaa">
     <!-- header section strats -->
     <header class="header_section">
       <div class="header_top">
         <div class="container-fluid header_top_container"> 
-          <a class="navbar-brand " href="/"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"></a>
+          <a class="navbar-brand " href="/">  <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"> </a>
           <div class="contact_nav">
             <a href="">
               
@@ -28,7 +29,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand navbar_brand_mobile" href="/"> <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"> </a>
+            <a class="navbar-brand navbar_brand_mobile" href="/">  <img src="{{ asset('assets/images/logo_sdv.jpeg') }}" alt="logo" width="100" height="50"> </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
@@ -55,30 +56,7 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-                
-            </div>
-          </div>
-          
-        </div>
-        <div class="carousel_btn-box">
-          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- end slider section -->
+    
   </div>
 
 
@@ -87,19 +65,40 @@
   <section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
-        <h2>Layanan <span>Warga</span></h2>
+        <h2>Laporan Keuangan <span> San Dramaga Village Residence</span></h2>
       </div>
+      <br><br>
       <div class="row">
+      <a href="#" class="btn btn-primary" style="width: 100%; margin: 0px 10px 0px 10px; background-color: #fecf39; border: none;">Unduh Laporan Keuangan</a>
         <div class="col-sm-6 col-md-4">
           <div class="box ">
             <div class="img-box">
-              <img src="{{ asset('assets/images/home.png') }}" alt="" />
+              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
             </div>
             <div class="detail-box">
               <h5>
-                Pendaftaran Warga Baru
+                Sisa Kas Warga di Bulan {{ date('F Y', strtotime('-1 month')) }}
               </h5>
+              <br>
               <p>
+              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu, 0, ',', '.') }}</strong></h2>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ asset('assets/images/iuran.png') }}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Sisa Kas Warga Sampai Tanggal {{ date('d F Y') }}
+              </h5>
+              <br>
+              <p>
+
+              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu-$total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
                 
               </p>
             </div>
@@ -112,28 +111,16 @@
             </div>
             <div class="detail-box">
               <h5>
-                Pembayaran Iuran
+                Pengeluaran Sampai Tanggal {{ date('d F Y') }}
               </h5>
+              <br>
               <p>
-                
+              <h2><strong>Rp. {{ number_format($total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/phone.png') }}" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Kontak Darurat
-              </h5>
-              <p>
-                
-              </p>
-            </div>
-          </div>
+          <br>
+          <a href="#" class="btn btn-primary" style="width: 100%; background-color: #fecf39; border: none;">Detail Laporan Pengeluaran</a>
         </div>
         
       </div>
@@ -143,38 +130,6 @@
     </div>
   </section>
 
-  <!-- end service section -->
-
-<!-- about section -->
-
-<section class="about_section layout_padding">
-  <div class="container  ">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-            <h2>Gabung Grup <span>Whatsapp</span></h2>
-          </div>
-          <p>
-            kenal kami lebih dekat di whatsapp grup warga San Dramaga Village
-dengan 100 Anggota Warga
-          </p>
-          <a href="">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            Gabung Grup
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 ">
-        <div class="img-box">
-          <img src="{{ asset('assets/images/group.jpg') }}" alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end about section -->
   <!-- info section -->
 
   <section class="info_section ">
@@ -185,7 +140,7 @@ dengan 100 Anggota Warga
         </div>
         <div class="info_main">
           <div class="row">
-            
+        
             <div class="col-md-3 col-lg-5">
               <h5>
                 Alamat
@@ -205,7 +160,7 @@ dengan 100 Anggota Warga
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -213,7 +168,7 @@ dengan 100 Anggota Warga
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -232,7 +187,7 @@ dengan 100 Anggota Warga
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -240,7 +195,7 @@ dengan 100 Anggota Warga
                     <a href="#" class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Call +01 1234567890
+                        Call 1234
                       </span>
                     </a>
                   </li>
@@ -256,4 +211,49 @@ dengan 100 Anggota Warga
 
   <!-- end info section -->
 
+  <style>
+    .payment-list{
+        width: 100%;
+        font-size: large;
+        height: 50px;
+        text-align: left;
+        border: none;
+        margin-bottom: -6px;
+        font-weight: 600;
+        padding-left: 20px;
+    }
+
+    .payment-list:hover{
+        border: none;
+    }
+
+    .payment-content{
+        padding-left: 20px;
+        margin: 20px 20px 20px 0px;
+    }
+    .payment-content a {
+        display: inline-block;
+        padding: 10px 35px;
+        background-color: #fecf39;
+        color: #ffffff;
+        border-radius: 0px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        border: 1px solid #fecf39;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+    }
+ 
+  </style>
+  <script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Nomor rekening berhasil disalin: ' + text);
+        }, function(err) {
+            console.error('Gagal menyalin teks: ', err);
+        });
+    }
+</script>
 @endsection
