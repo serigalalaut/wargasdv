@@ -67,7 +67,7 @@
       <div class="heading_container heading_center">
         <h2>Portal Pembayaran IPL Warga<span> San Dramaga Village</span></h2>
       </div>
-      <br><br>
+      
       <div class="row">
       <div class="col-sm-6 col-md-12">
           <div class="box ">
@@ -82,7 +82,7 @@
               <p>
               <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
               <br>
-              Warga sudah yang membayar <strong>{{$total_warga}} KK</strong><br>
+              Warga yang sudah membayar <strong>{{$total_warga}} KK</strong><br>
               warga yang belum membayar <strong>{{ env('total_warga') - $total_warga }} KK</strong>
             </p>
             </div>
@@ -216,36 +216,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="background-color: #fff;">
-                            <img src="{{ asset('assets/images/logo_bsi.png') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Transfer Bank BSI
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                            <div class="accordion-body">
-                                <p>
-                                    <b>Nama Rekening</b> : {{$namerek}}
-                                </p>
-                                <p>
-                                    <b>Nomor Rekening</b> : {{$norek}} <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('{{$norek}}')" style="cursor: pointer;"></i>
-                                    
-                                </p>
-                                <p>
-                                    Harap ketikan  <strong>BLOK & NO RUMAH</strong> di Form <strong>Konfirmasi Pembayaran</strong>
-                                </p>
-                                <p>
-                                    <div class="detail-box">            
-                                        <a href="https://admin.wargasdv.com/payment-confirmation?type=bsi">
-                                            Konfirmasi Pembayaran
-                                        </a>
-                                    </div>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
+                    
+                      <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingFive">
                             <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" style="background-color: #fff;">
                             <img src="{{ asset('assets/images/code.jpg') }}" alt="" width="50" height="15" style="margin-right: 10px;"> Bayar Cash
@@ -264,6 +236,17 @@
                                 </p>
                             </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFivee">
+                        <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFivee" aria-expanded="false" aria-controls="flush-collapseFivee" style="background-color: #fff;">
+                        <img src="" alt="" width="50" height="15" style="margin-right: 10px;"> 
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFivee" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingFivee" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            
                         </div>
                     </div>
                 </div>
