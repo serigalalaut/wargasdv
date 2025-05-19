@@ -76,7 +76,7 @@
             </div>
             <div class="detail-box">
               <h5>
-                Iuran Pengelolaan Lingkungan Bulan {{ date('F Y') }}
+                Iuran Pengelolaan Lingkungan Bulan {{ date('F Y', strtotime(env('period'))) }}
               </h5>
               <br>
               <p>
@@ -241,8 +241,7 @@
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingFivee">
                         <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFivee" aria-expanded="false" aria-controls="flush-collapseFivee" style="background-color: #fff;">
-                        
-                        </button>
+                        <img alt="" width="50" height="15" style="margin-right: 10px;"> 
                     </h2>
                     <div id="flush-collapseFivee" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingFivee" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
