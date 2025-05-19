@@ -241,7 +241,7 @@
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingFivee">
                         <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFivee" aria-expanded="false" aria-controls="flush-collapseFivee" style="background-color: #fff;">
-                        <img src="" alt="" width="50" height="15" style="margin-right: 10px;"> 
+                        
                         </button>
                     </h2>
                     <div id="flush-collapseFivee" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingFivee" data-bs-parent="#accordionFlushExample">
