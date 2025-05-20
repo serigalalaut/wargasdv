@@ -155,6 +155,9 @@
                                 <h6 style="font-weight: bold;">QRIS DANA</h6>
                                 <p>Scan QR di Aplikasi Dana</p>
                                 <p><img src="{{ asset('assets/images/dana.jpeg') }}" alt="" width="100%"></p>
+                                <br>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
+
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=dana">
@@ -162,6 +165,7 @@
                                         </a>
                                     </div>
                                 </p>
+                                
                             </div>
                         </div>
                     </div>
@@ -178,6 +182,8 @@
                                 <h6 style="font-weight: bold;">QRIS Gopay</h6>
                                 <p>Scan QR di AplikasiGopay</p>
                                 <p><img src="{{ asset('assets/images/gopay.jpeg') }}" alt="" width="100%"></p>
+                                <br>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=gopay">
@@ -206,6 +212,8 @@
                                 <p>
                                     Harap ketikan  <strong>BLOK & NO RUMAH</strong> di Form <strong>Konfirmasi Pembayaran</strong>
                                 </p>
+                                <br>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=jago">
@@ -226,7 +234,8 @@
                         <div id="flush-collapseFive" class="accordion-collapse collapse payment-content" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                             <div class="accordion-body">
-                                
+                           
+                            <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://wa.me/6281385548571">
