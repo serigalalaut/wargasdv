@@ -69,59 +69,65 @@
       </div>
       <br><br>
       <div class="row">
-      <a href="/laporan-keuangan" class="btn btn-primary" style="width: 100%; margin: 0px 10px 0px 10px; background-color: #fecf39; border: none;">Detail Laporan Keuangan</a>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Kas Peralihan Dari Periode Sebelumnya <!--{{ date('F Y', strtotime('-1 month')) }}-->
-              </h5>
-              <br>
-              <p>
-              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu, 0, ',', '.') }}</strong></h2>
-              </p>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <input type="month" class="form-control" id="locfilter" placeholder="Cari Data" style="margin-bottom: 10px;" value="{{ date('Y-m') }}">
+          <a href="/laporan-keuangan?period=" class="btn btn-primary" onclick="this.href='/laporan-keuangan?period=' + document.getElementById('locfilter').value" style="width: 100%; background-color: #fecf39; border: none;">Cari Data</a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Sisa Kas Warga Tanggal {{ date('d F Y') }}
-              </h5>
-              <br>
-              <p>
-
-              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu-$total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
-                
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Pengeluaran Sampai Dengan Tanggal {{ date('d F Y') }}
-              </h5>
-              <br>
-              <p>
-              <h2><strong>Rp. {{ number_format($total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
-              </p>
-            </div>
-          </div>
-          <br>
-          <a href="/pengeluaran" class="btn btn-primary" style="width: 100%; background-color: #fecf39; border: none;">Detail Laporan Pengeluaran</a>
-        </div>
+        
+      </div>
+      <br>
+      <table class="table table-bordered">
+      <thead>
+        
+        </thead>
+        <tbody>
+        <tr style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
+            <td colspan="2" >Saldo Awal</td>
+            
+            <td style="font-weight: bold;">Rp. {{ number_format($saldoAwal, 0, ',', '.') }}</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pemasukan</td>
+          </tr>
+          @foreach ($kas_warga as $item)
+          <tr>
+            <td>{{ date('Y-m-d', strtotime($item->created_at)) }}</td>
+            <td>{{ $item->title }}</td>
+            <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
+            
+          </tr>
+          <tr>
+            <td colspan="2">Total</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas, 0, ',', '.') }}</td>
+            
+          </tr>
+          @endforeach
+          <!-- Pemisah antara pemasukan dan pengeluaran -->
+          <tr>
+            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pengeluaran</td>
+          </tr>
+          @foreach ($pengeluaran as $item)
+          <tr>
+            <td>{{ date('Y-m-d', strtotime($item->created_at)) }}</td>
+            <td>{{ $item->title }}</td>
+            
+            <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
+            
+          </tr>
+          <tr>
+            <td colspan="2">Total</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalPengeluaran, 0, ',', '.') }}</td>
+          </tr>
+          @endforeach
+        </tbody>
+        <tfoot style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
+          <tr>
+            <td colspan="2">Saldo Akhir</td>
+            
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas - $totalPengeluaran, 0, ',', '.') }}</td>
+          </tr>
+        </tfoot>
+      </table>
         
       </div>
       <div class="btn-box">

@@ -65,63 +65,39 @@
   <section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
-        <h2>Laporan Keuangan <span> San Dramaga Village</span></h2>
+        <h2>Laporan Pengeluaran <span> San Dramaga Village</span></h2>
       </div>
       <br><br>
+      
       <div class="row">
-      <a href="/laporan-keuangan" class="btn btn-primary" style="width: 100%; margin: 0px 10px 0px 10px; background-color: #fecf39; border: none;">Detail Laporan Keuangan</a>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Kas Peralihan Dari Periode Sebelumnya <!--{{ date('F Y', strtotime('-1 month')) }}-->
-              </h5>
-              <br>
-              <p>
-              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu, 0, ',', '.') }}</strong></h2>
-              </p>
-            </div>
-          </div>
+      
+        <div class="col-md-6">
+          <input type="month" class="form-control" id="locfilter" placeholder="Cari Data" style="margin-bottom: 10px;" value="{{ date('Y-m') }}">
+          <a href="/pengeluaran?period=" class="btn btn-primary" onclick="this.href='/pengeluaran?period=' + document.getElementById('locfilter').value" style="width: 100%; background-color: #fecf39; border: none;">Cari Data</a>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Sisa Kas Warga Tanggal {{ date('d F Y') }}
-              </h5>
-              <br>
-              <p>
-
-              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu-$total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
-                
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Pengeluaran Sampai Dengan Tanggal {{ date('d F Y') }}
-              </h5>
-              <br>
-              <p>
-              <h2><strong>Rp. {{ number_format($total_pengeluaran_bulan_ini, 0, ',', '.') }}</strong></h2>
-              </p>
-            </div>
-          </div>
-          <br>
-          <a href="/pengeluaran" class="btn btn-primary" style="width: 100%; background-color: #fecf39; border: none;">Detail Laporan Pengeluaran</a>
-        </div>
+        
+      </div>
+      <br>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Keterangan</th>
+            <th>Nominal</th>
+            <th>Bukti Pembayaran</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($pengeluaran as $item)
+            <tr>
+              <td>{{ date('d F Y', strtotime($item->created_at)) }}</td>
+              <td>{{ $item->title }}</td>
+              <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
+              <td><a href="https://admin.wargasdv.com/storage/{{ $item->media_file }}" target="_blank">Lihat Bukti</a></td>
+            </tr>
+          @endforeach
+        </tbody>
+      </table>
         
       </div>
       <div class="btn-box">

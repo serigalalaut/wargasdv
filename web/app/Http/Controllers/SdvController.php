@@ -28,9 +28,36 @@ class SdvController extends Controller
     public function laporan_keuangan()
     {
                   
-        $total_kas_bulan_lalu = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [date('Y-m', strtotime('-1 month'))])->sum('nominal');
+        $total_kas_bulan_lalu = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [date('Y-m')])->sum('nominal');
         $total_pengeluaran_bulan_ini = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [date('Y-m')])->sum('nominal');
         return view('laporan_keuangan', ['total_kas_bulan_lalu' => $total_kas_bulan_lalu, 'total_pengeluaran_bulan_ini' => $total_pengeluaran_bulan_ini]);
     }
-    
+
+    public function Pengeluaran(Request $request)
+    {
+        $period = $request->period;
+
+        if($period == null){
+            $period = date('Y-m');
+        }
+
+        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
+        return view('pengeluaran', ['pengeluaran' => $pengeluaran]);
+    }
+
+    public function laporan_kas(Request $request)
+    {
+        $period = $request->period;
+
+        if($period == null){
+            $period = date('Y-m');
+        }
+
+        $saldoAwal = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [strtotime('-1 month', strtotime($period))])->sum('nominal');
+        $totalKas = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
+        $kas_warga = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
+        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
+        $totalPengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
+        return view('laporan_kas', ['saldoAwal' => $saldoAwal, 'totalKas' => $totalKas, 'totalPengeluaran' => $totalPengeluaran, 'kas_warga' => $kas_warga, 'pengeluaran' => $pengeluaran]);
+    }
 }
