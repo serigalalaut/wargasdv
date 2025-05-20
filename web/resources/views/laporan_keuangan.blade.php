@@ -77,7 +77,7 @@
             </div>
             <div class="detail-box">
               <h5>
-                Sisa Kas Warga di Bulan {{ date('F Y', strtotime('-1 month')) }}
+                Kas Peralihan Dari Periode Sebelumnya <!--{{ date('F Y', strtotime('-1 month')) }}-->
               </h5>
               <br>
               <p>
