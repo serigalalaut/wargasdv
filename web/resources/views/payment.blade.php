@@ -156,7 +156,7 @@
                                 <p>Scan QR di Aplikasi Dana</p>
                                 <p><img src="{{ asset('assets/images/dana.jpeg') }}" alt="" width="100%"></p>
                                 <br>
-                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa beberapa bulan sekaligus</p>
 
                                 <p>
                                     <div class="detail-box">            
@@ -183,7 +183,7 @@
                                 <p>Scan QR di AplikasiGopay</p>
                                 <p><img src="{{ asset('assets/images/gopay.jpeg') }}" alt="" width="100%"></p>
                                 <br>
-                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa beberapa bulan sekaligus</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=gopay">
@@ -213,7 +213,7 @@
                                     Harap ketikan  <strong>BLOK & NO RUMAH</strong> di Form <strong>Konfirmasi Pembayaran</strong>
                                 </p>
                                 <br>
-                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
+                                <p><strong>Disclaimer</strong> : Pembayaran IPL bisa beberapa bulan sekaligus</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://admin.wargasdv.com/payment-confirmation?type=jago">
@@ -235,7 +235,7 @@
                             <div class="accordion-body">
                             <div class="accordion-body">
                            
-                            <p><strong>Disclaimer</strong> : Pembayaran IPL bisa di rapel</p>
+                            <p><strong>Disclaimer</strong> : Pembayaran IPL bisa beberapa bulan sekaligus</p>
                                 <p>
                                     <div class="detail-box">            
                                         <a href="https://wa.me/6281385548571">
