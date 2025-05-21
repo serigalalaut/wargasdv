@@ -87,7 +87,7 @@
             <td style="font-weight: bold;">Rp. {{ number_format($saldoAwal, 0, ',', '.') }}</td>
           </tr>
           <tr>
-            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pemasukan</td>
+            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pemasukan Kas</td>
           </tr>
           @foreach ($kas_warga as $item)
           <tr>
@@ -104,7 +104,7 @@
           @endforeach
           <!-- Pemisah antara pemasukan dan pengeluaran -->
           <tr>
-            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pengeluaran</td>
+            <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pengeluaran Kas</td>
           </tr>
           @foreach ($pengeluaran as $item)
           <tr>
