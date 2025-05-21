@@ -83,7 +83,7 @@
               <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
               <br>
               Warga yang sudah membayar <strong>{{$total_warga}} KK</strong><br>
-              warga yang belum membayar <strong>{{ env('total_warga') - $total_warga }} KK</strong>
+              
             </p>
             </div>
           </div>
