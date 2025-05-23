@@ -19,8 +19,8 @@ class SdvController extends Controller
         $norek = env('norek');
         $namerek = env('namerek');
         $period = env('period');
-        $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
-        $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
+        $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
+        $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
        
         return view('payment', ['phone' => $phone, 'norek' => $norek, 'namerek' => $namerek, 'total_warga' => $total_warga, 'total' => $total]);
     }

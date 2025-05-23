@@ -82,7 +82,7 @@
               <p>
               <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
               <br>
-              <!--Pembayaran Terkonfirmasi :<strong> {{$total_warga}} </strong> Warga <br>-->
+              Pembayaran Terkonfirmasi :<strong> {{$total_warga}} </strong> Warga <br>
             </p>
             </div>
           </div>
