@@ -21,8 +21,22 @@ class SdvController extends Controller
         $period = env('period');
         $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
         $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
-       
-        return view('payment', ['phone' => $phone, 'norek' => $norek, 'namerek' => $namerek, 'total_warga' => $total_warga, 'total' => $total]);
+        $list = DB::table('ipl')
+            ->select('ipl.home_no','ipl.status','ipl.is_deposit')
+            //->leftJoin('ipl','ipl.home_no','=','komplek.no')
+            //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
+            ->get();
+        $total_warga_belum = DB::table('ipl')->where('status','Pengecekan Admin')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
+            
+        return view('payment', [
+            'phone' => $phone, 
+            'norek' => $norek, 
+            'namerek' => $namerek, 
+            'total_warga' => $total_warga, 
+            'total' => $total, 
+            'list' => $list,
+            'total_warga_belum' => $total_warga_belum
+        ]);
     }
 
     public function laporan_keuangan()

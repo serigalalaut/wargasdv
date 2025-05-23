@@ -83,6 +83,7 @@
               <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
               <br>
               Pembayaran Terkonfirmasi :<strong> {{$total_warga}} </strong> Warga <br>
+              Pembayaran Belum Terkonfirmasi :<strong> {{$total_warga_belum}} </strong> Warga
             </p>
             </div>
           </div>
@@ -139,7 +140,7 @@
                     Pilih Metode Pembayaran
                   </div>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
+                    <!--<div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             
                             <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: #fff;">
@@ -192,7 +193,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed payment-list" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="background-color: #fff;">
@@ -259,6 +260,23 @@
                 </div>
               </div>
             </div>
+        </div>
+        <br>
+        <div class="col-sm-6 col-md-12" style="margin-top:15px">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Nomor Rumah</th>
+                    <!--<th>Bayar</th>-->
+                    <th>Status</th>
+                </tr>
+                @foreach ($list as $item)
+                    <tr>
+                        <td>{{ $item->home_no }}</td>
+                        <!--<td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Rp. 65.000 @endif</td>-->
+                        <td>{{ $item->status }}</td>
+                    </tr>
+                @endforeach
+            </table>
         </div>
       </div>
     </div>
