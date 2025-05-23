@@ -76,4 +76,9 @@ class SdvController extends Controller
         $totalPengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
         return view('laporan_kas', ['saldoAwal' => $saldoAwal, 'totalKas' => $totalKas, 'totalPengeluaran' => $totalPengeluaran, 'kas_warga' => $kas_warga, 'pengeluaran' => $pengeluaran]);
     }
+
+    public function confirmation(Request $request)
+    {
+        return redirect()->away('https://admin.wargasdv.com/payment-confirmation');
+    }
 }
