@@ -21,10 +21,12 @@ class SdvController extends Controller
         $period = env('period');
         $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
         $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
-        $list = DB::table('ipl')
-            ->select('ipl.home_no','ipl.status','ipl.is_deposit')
-            //->leftJoin('ipl','ipl.home_no','=','komplek.no')
+        $list = DB::table('komplek')
+            ->select('ipl.home_no','ipl.status','komplek.is_deposit')
+            ->leftJoin('ipl','ipl.home_no','=','komplek.no')
+            ->whereIn('ipl.status',['Lunas','Pengecekan Admin'])
             //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
+            ->orderBy('ipl.home_no','asc')
             ->get();
         $total_warga_belum = DB::table('ipl')->where('status','Pengecekan Admin')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
             

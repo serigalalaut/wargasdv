@@ -266,14 +266,16 @@
             <table class="table table-bordered">
                 <tr>
                     <th>Nomor Rumah</th>
-                    <!--<th>Bayar</th>-->
+                    
                     <th>Status</th>
+                    <th>Keterangan</th>
                 </tr>
                 @foreach ($list as $item)
                     <tr>
                         <td>{{ $item->home_no }}</td>
-                        <!--<td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Rp. 65.000 @endif</td>-->
                         <td>{{ $item->status }}</td>
+                        <td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Normal @endif</td>
+                        
                     </tr>
                 @endforeach
             </table>
