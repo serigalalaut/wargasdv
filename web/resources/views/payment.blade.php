@@ -262,7 +262,10 @@
             </div>
         </div>
         <br>
+        
         <div class="col-sm-6 col-md-12" style="margin-top:15px">
+        <h5>Status Pembayaran</h5>
+        <p style="font-size: 10px;"><i>jika menggunakan hp, scroll ke samping untuk melihat data selengkapnya</i></p>
             <div style="overflow-x:auto;">
                 <table class="table table-bordered">
                     <tr>
