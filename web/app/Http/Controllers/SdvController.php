@@ -22,7 +22,7 @@ class SdvController extends Controller
         $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
         $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
         $list = DB::table('komplek')
-            ->select('ipl.home_no','ipl.status','komplek.is_deposit')
+            ->select('ipl.home_no','ipl.status','komplek.is_deposit','ipl.is_addon','ipl.note')
             ->leftJoin('ipl','ipl.home_no','=','komplek.no')
             ->whereIn('ipl.status',['Lunas','Pengecekan Admin'])
             //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
