@@ -263,23 +263,24 @@
         </div>
         <br>
         <div class="col-sm-6 col-md-12" style="margin-top:15px">
-            <table class="table table-bordered">
-                <tr>
-                    <th>Nomor Rumah</th>
-                    <th>Nominal</th>
-                    <th>Status</th>
-                    <th>Keterangan</th>
-                </tr>
-                @foreach ($list as $item)
+            <div style="overflow-x:auto;">
+                <table class="table table-bordered">
                     <tr>
-                        <td>{{ $item->home_no == 'B1-02' ? $item->home_no . " (Keamanan saja)": $item->home_no}}</td>
-                        <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
-                        <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
-                        <td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000 @if($item->is_addon == 1) + {{ $item->note }} @endif</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Normal @endif</td>
-                        
+                        <th>Nomor Rumah</th>
+                        <th>Nominal</th>
+                        <th>Status</th>
+                        <th>Keterangan</th>
                     </tr>
-                @endforeach
-            </table>
+                    @foreach ($list as $item)
+                        <tr>
+                            <td>{{ $item->home_no == 'B1-02' ? $item->home_no . " (Keamanan saja)": $item->home_no}}</td>
+                            <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
+                            <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
+                            <td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000 @if($item->is_addon == 1) + {{ $item->note }} @endif</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Normal @endif</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
         </div>
       </div>
     </div>
