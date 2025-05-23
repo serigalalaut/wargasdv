@@ -273,7 +273,7 @@
                 @foreach ($list as $item)
                     <tr>
                         <td>{{ $item->home_no }}</td>
-                        <td>{{ $item->status }}</td>
+                        <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
                         <td>@if($item->is_deposit == 2) <p>Kosong</p> @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000</b> @elseif($item->is_deposit == 3) <b>Deposit</b>@elseif($item->is_deposit == 4) <b>Normal +Rapel dengan bulan Mei</b> @else Normal @endif</td>
                         
                     </tr>
