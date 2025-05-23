@@ -84,7 +84,7 @@
         <tr style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
             <td colspan="2" >Saldo Awal</td>
             
-            <td style="font-weight: bold;">Rp. {{ number_format($saldoAwal, 0, ',', '.') }}</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas, 0, ',', '.') }}</td>
           </tr>
           <tr>
             <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pemasukan Kas</td>
