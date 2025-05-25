@@ -26,7 +26,7 @@ class SdvController extends Controller
             ->leftJoin('ipl','ipl.home_no','=','komplek.no')
             ->whereIn('ipl.status',['Lunas','Pengecekan Admin'])
             //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
-            ->orderBy('ipl.home_no','asc')
+            ->orderBy('ipl.created_at','desc')
             ->get();
         $total_warga_belum = DB::table('ipl')->where('status','Pengecekan Admin')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
             
