@@ -96,12 +96,13 @@
             <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
             
           </tr>
+          
+          @endforeach
           <tr>
             <td colspan="2">Total</td>
             <td style="font-weight: bold;">Rp. {{ number_format($totalKas, 0, ',', '.') }}</td>
             
           </tr>
-          @endforeach
           <!-- Pemisah antara pemasukan dan pengeluaran -->
           <tr>
             <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pengeluaran Kas</td>
@@ -114,11 +115,12 @@
             <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
             
           </tr>
+          
+          @endforeach
           <tr>
             <td colspan="2">Total</td>
             <td style="font-weight: bold;">Rp. {{ number_format($totalPengeluaran, 0, ',', '.') }}</td>
           </tr>
-          @endforeach
         </tbody>
         <tfoot style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
           <tr>

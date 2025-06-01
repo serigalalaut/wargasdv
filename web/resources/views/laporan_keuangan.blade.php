@@ -77,7 +77,9 @@
             </div>
             <div class="detail-box">
               <h5>
-                Kas Peralihan Dari Periode Sebelumnya <!--{{ date('F Y', strtotime('-1 month')) }}-->
+                
+                <!--Kas Peralihan Dari Periode Sebelumnya {{ date('F Y', strtotime('-1 month')) }}-->
+                Sisa Kas Warga Per Akhir Mei 2025
               </h5>
               <br>
               <p>
