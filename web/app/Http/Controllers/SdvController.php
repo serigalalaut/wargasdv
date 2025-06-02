@@ -25,6 +25,7 @@ class SdvController extends Controller
             ->select('ipl.home_no','ipl.status','komplek.is_deposit','ipl.is_addon','ipl.note','ipl.nominal')
             ->leftJoin('ipl','ipl.home_no','=','komplek.no')
             ->whereIn('ipl.status',['Lunas','Pengecekan Admin'])
+            ->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])
             //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
             ->orderBy('ipl.created_at','desc')
             ->get();
