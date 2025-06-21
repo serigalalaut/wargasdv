@@ -70,25 +70,8 @@
       <br><br>
       <div class="row">
       <a href="/laporan-keuangan" class="btn btn-primary" style="width: 100%; margin: 0px 10px 0px 10px; background-color: #fecf39; border: none;">Detail Laporan Keuangan</a>
-        <div class="col-sm-6 col-md-4">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                
-                <!--Kas Peralihan Dari Periode Sebelumnya {{ date('F Y', strtotime('-1 month')) }}-->
-                Sisa Kas Warga Per Akhir Mei 2025
-              </h5>
-              <br>
-              <p>
-              <h2><strong>Rp. {{ number_format($total_kas_bulan_lalu, 0, ',', '.') }}</strong></h2>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
+        
+        <div class="col-sm-6 col-md-6">
           <div class="box ">
             <div class="img-box">
               <img src="{{ asset('assets/images/iuran.png') }}" alt="">
@@ -106,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-6">
           <div class="box ">
             <div class="img-box">
               <img src="{{ asset('assets/images/iuran.png') }}" alt="">
