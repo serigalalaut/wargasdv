@@ -84,7 +84,7 @@
         <tr style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
             <td colspan="2" >Saldo Awal</td>
             
-            <td style="font-weight: bold;">Rp. {{ number_format($totalKas, 0, ',', '.') }}</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas1, 0, ',', '.') }}</td>
           </tr>
           <tr>
             <td colspan="5" style="background-color: #f0f0f0; text-align: left; font-weight: bold;">Pemasukan Kas</td>
@@ -100,7 +100,7 @@
           @endforeach
           <tr>
             <td colspan="2">Total</td>
-            <td style="font-weight: bold;">Rp. {{ number_format($totalKas, 0, ',', '.') }}</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas2, 0, ',', '.') }}</td>
             
           </tr>
           <!-- Pemisah antara pemasukan dan pengeluaran -->
@@ -126,7 +126,7 @@
           <tr>
             <td colspan="2">Saldo Akhir</td>
             
-            <td style="font-weight: bold;">Rp. {{ number_format($totalKas - $totalPengeluaran, 0, ',', '.') }}</td>
+            <td style="font-weight: bold;">Rp. {{ number_format($totalKas2 - $totalPengeluaran, 0, ',', '.') }}</td>
           </tr>
         </tfoot>
       </table>

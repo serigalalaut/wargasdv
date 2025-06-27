@@ -71,11 +71,12 @@ class SdvController extends Controller
         }
 
         $saldoAwal = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [strtotime('-1 month', strtotime($period))])->sum('nominal');
-        $totalKas = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
-        $kas_warga = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
-        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
+        $totalKas1 = DB::table('kas_warga')->where('is_saldo_awal',1)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
+        $totalKas2 = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
+        $kas_warga = DB::table('kas_warga')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->orderBy('created_at','asc')->get();
+        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->orderBy('created_at','asc')->get();
         $totalPengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
-        return view('laporan_kas', ['saldoAwal' => $saldoAwal, 'totalKas' => $totalKas, 'totalPengeluaran' => $totalPengeluaran, 'kas_warga' => $kas_warga, 'pengeluaran' => $pengeluaran]);
+        return view('laporan_kas', ['saldoAwal' => $saldoAwal, 'totalKas1' => $totalKas1, 'totalKas2' => $totalKas2, 'totalPengeluaran' => $totalPengeluaran, 'kas_warga' => $kas_warga, 'pengeluaran' => $pengeluaran]);
     }
 
     public function confirmation(Request $request)

@@ -280,12 +280,10 @@
                             <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
                             <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
                             <td>
-                              @if($item->is_deposit == 2) <p>Kosong</p> 
-                              @elseif($item->is_deposit == 1) <b>Deposit + Rp. 15.000 @if($item->is_addon == 1) + {{ $item->note }} @endif</b> 
+                              @if($item->is_deposit == 2) <p>Kosong</p>  
                               @elseif($item->is_deposit == 3) <b>Deposit</b>
-                              @elseif($item->is_deposit == 4) <b>Normal + Rapel dengan bulan Mei</b> 
-                              @elseif($item->is_deposit == 5) <b>Normal + Deposit Bulan Juli 2025</b> 
-                              @elseif($item->is_deposit == 6) <b>(Deposit + Rp. 15.000) + Deposit Bulan Juli 2025</b> 
+                              @elseif($item->is_deposit == 4) <b>Normal + Rapel dengan bulan Juni</b> 
+                              @elseif($item->is_deposit == 5) <b>Normal + Deposit Bulan Agustus 2025</b>  
                               @elseif($item->is_deposit == 0) <b>Normal @if($item->is_addon == 1) + {{ $item->note }} </b>@endif
                               @endif
                             </td>
