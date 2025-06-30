@@ -283,7 +283,9 @@
                               @if($item->is_deposit == 2) <p>Kosong</p>  
                               @elseif($item->is_deposit == 3) <b>Deposit</b>
                               @elseif($item->is_deposit == 4) <b>Normal + Rapel dengan bulan Juni</b> 
-                              @elseif($item->is_deposit == 5) <b>Normal + Deposit Bulan Agustus 2025</b>  
+                              @elseif($item->is_deposit == 5) <b>Normal + Deposit 1 Bulan Kedepan</b>
+                              @elseif($item->is_deposit == 6) <b>Normal + Deposit 2 Bulan Kedepan</b>
+                              @elseif($item->is_deposit == 7) <b>Normal + Deposit 1 Bulan Kedepan (Hanya Iuran Keamanan)</b>  
                               @elseif($item->is_deposit == 0) <b>Normal @if($item->is_addon == 1) + {{ $item->note }} </b>@endif
                               @endif
                             </td>
