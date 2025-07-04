@@ -48,6 +48,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Kontak Darurat</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/aspirasi-warga">Aspirasi Warga</a>
+                </li>
               </ul>
             </div>
           </nav>
