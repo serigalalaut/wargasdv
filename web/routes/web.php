@@ -10,3 +10,6 @@ Route::get('/ipl-confirmation', [SdvController::class, 'confirmation']);
 Route::get('/laporan', [SdvController::class, 'laporan_keuangan']);
 Route::get('/pengeluaran', [SdvController::class, 'Pengeluaran']);
 Route::get('/laporan-keuangan', [SdvController::class, 'laporan_kas']);
+Route::get('/aspirasi-warga', [SdvController::class, 'aspirasi']);
+Route::post('/send-aspirasi', [SdvController::class, 'sendAspirasi']);
+

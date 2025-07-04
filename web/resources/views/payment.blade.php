@@ -15,10 +15,10 @@
                 
               </span>
             </a>
-            <a href="">
+            <a href="/aspirasi-warga">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                Saran dan Masukan
+                Aspirasi Warga
               </span>
             </a>
             
@@ -274,7 +274,18 @@
                         <th>Status</th>
                         <th>Keterangan</th>
                     </tr>
+                    @php
+                        $blok = '';
+                    @endphp
                     @foreach ($list as $item)
+                        @if($blok != $item->blok)
+                            <tr style="background-color: #f0f0f0; text-align: left; font-weight: bold;">
+                                <td colspan="4" >Blok {{ $item->blok }}</td>
+                            </tr>
+                            @php
+                                $blok = $item->blok;
+                            @endphp
+                        @endif
                         <tr>
                             <td>{{ $item->home_no == 'B1-02' ? $item->home_no . " (Keamanan + kas warga)": $item->home_no}}</td>
                             <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>

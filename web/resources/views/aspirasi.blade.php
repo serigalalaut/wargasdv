@@ -65,44 +65,20 @@
   <section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
-        <h2>Laporan Pengeluaran <span> San Dramaga Village</span></h2>
+        <h2>Portal Aspirasi Warga<span> San Dramaga Village</span></h2>
       </div>
-      <br><br>
       
       <div class="row">
-      
-        <div class="col-md-6">
-          <input type="month" class="form-control" id="locfilter" placeholder="Cari Data" style="margin-bottom: 10px;" value="{{ date('Y-m') }}">
-          <a href="/pengeluaran?period=" class="btn btn-primary" onclick="this.href='/pengeluaran?period=' + document.getElementById('locfilter').value" style="width: 100%; background-color: #fecf39; border: none;">Cari Data</a>
+      <div class="col-sm-6 col-md-12">
+        <h3 style="color: green;text-align: center;font-weight: bold">@if(session('success')) {{ session('success') }} @endif</h3>
+         <br>
+           <form action="/send-aspirasi" method="post">
+            @csrf
+            <textarea style="height:300px" name="aspirasi" id="aspirasi" class="form-control" placeholder="Masukan aspirasi, keluhan, masukan atau saran Anda" required></textarea>
+            <br>
+            <button type="submit" class="btn btn-primary" style="background-color: #fecf39; border: none;">Kirim Aspirasi</button>
+          </form>
         </div>
-        
-      </div>
-      <br>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Tanggal</th>
-            <th>Keterangan</th>
-            <th>Nominal</th>
-            <th>Bukti Pembayaran</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach ($pengeluaran as $item)
-            <tr>
-              <td>{{ date('d F Y', strtotime($item->created_at)) }}</td>
-              <td>{{ $item->title }}</td>
-              <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
-              <td><a href="https://admin.wargasdv.com/storage/{{ $item->media_file }}" target="_blank">Lihat Bukti</a></td>
-            </tr>
-          @endforeach
-        </tbody>
-      </table>
-        
-      </div>
-      <div class="btn-box">
-        
-      </div>
     </div>
   </section>
 
@@ -132,28 +108,29 @@
                   Kontak Darurat
                 </h5>
                 <ul>
-                <li class=" active">
-                    <div class="link-box">
+                  <li class=" active">
+                    <a class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                        Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02517589113')" style="cursor: pointer;"></i>
+                        Damkar Ciomas 02517589113 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboardTelp('02517589113')" style="cursor: pointer;"></i>
                       </span>
-                    </div>
+                    </a>
                   </li>
                   <li class="">
-                    <div class="link-box">
+                    <a class="link-box">
                       <i class="fa fa-phone" aria-hidden="true"></i>
                       <span>
-                      Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboard('02518624107')" style="cursor: pointer;"></i>
+                      Polsek Dramaga 02518624107 <i class="fa fa-copy" aria-hidden="true" onclick="copyToClipboardTelp('02518624107')" style="cursor: pointer;"></i>
                       </span>
-                    </div>
+                    </a>
                   </li>
                   
                 </ul>
               </div>
             </div>
 
-          
+            
+            </div>
           </div>
         </div>
       </div>
@@ -162,49 +139,4 @@
 
   <!-- end info section -->
 
-  <style>
-    .payment-list{
-        width: 100%;
-        font-size: large;
-        height: 50px;
-        text-align: left;
-        border: none;
-        margin-bottom: -6px;
-        font-weight: 600;
-        padding-left: 20px;
-    }
-
-    .payment-list:hover{
-        border: none;
-    }
-
-    .payment-content{
-        padding-left: 20px;
-        margin: 20px 20px 20px 0px;
-    }
-    .payment-content a {
-        display: inline-block;
-        padding: 10px 35px;
-        background-color: #fecf39;
-        color: #ffffff;
-        border-radius: 0px;
-        -webkit-transition: all .3s;
-        transition: all .3s;
-        border: 1px solid #fecf39;
-        margin-top: 15px;
-        width: 100%;
-        text-align: center;
-        font-weight: 600;
-    }
- 
-  </style>
-  <script>
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(function() {
-            alert('Nomor telepon berhasil disalin: ' + text);
-        }, function(err) {
-            console.error('Gagal menyalin teks: ', err);
-        });
-    }
-</script>
 @endsection

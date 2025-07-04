@@ -22,12 +22,12 @@ class SdvController extends Controller
         $total_warga = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
         $total = DB::table('ipl')->where('status','Lunas')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->sum('nominal');
         $list = DB::table('komplek')
-            ->select('ipl.home_no','ipl.status','komplek.is_deposit','ipl.is_addon','ipl.note','ipl.nominal')
+            ->select('ipl.home_no','ipl.status','komplek.is_deposit','ipl.is_addon','ipl.note','ipl.nominal','komplek.id_list','komplek.blok')
             ->leftJoin('ipl','ipl.home_no','=','komplek.no')
             ->whereIn('ipl.status',['Lunas','Pengecekan Admin'])
             ->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])
             //->orderByRaw("ipl.status = 'Lunas',komplek.is_deposit = 0,komplek.no asc")
-            ->orderBy('ipl.created_at','desc')
+            ->orderBy('komplek.id_list','asc')
             ->get();
         $total_warga_belum = DB::table('ipl')->where('status','Pengecekan Admin')->where('type',1)->where('is_deposit',0)->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->count();
             
@@ -82,5 +82,21 @@ class SdvController extends Controller
     public function confirmation(Request $request)
     {
         return redirect()->away('https://admin.wargasdv.com/payment-confirmation');
+    }
+
+    public function aspirasi()
+    {
+        return view('aspirasi');
+    }
+
+    public function sendAspirasi(Request $request)
+    {
+        $aspirasi = $request->aspirasi;
+        DB::table('aspirasi')->insert([
+            'aspirasi' => $aspirasi,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+        return redirect()->back()->with('success', 'Aspirasi berhasil dikirim...');
     }
 }
