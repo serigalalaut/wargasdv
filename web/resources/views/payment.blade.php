@@ -86,7 +86,8 @@
               <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
               <br>
               Pembayaran Terkonfirmasi :<strong> {{$total_warga}} </strong> Warga <br>
-              Pembayaran Belum Terkonfirmasi :<strong> {{$total_warga_belum}} </strong> Warga
+              Pembayaran Belum Terkonfirmasi :<strong> {{$total_warga_belum}} </strong> Warga <br>
+              Rekap Pembayaran IPL 2025: <a href="/rekap-ipl">Klik Untuk Melihat</a>
             </p>
             </div>
           </div>

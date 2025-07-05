@@ -42,6 +42,19 @@ class SdvController extends Controller
         ]);
     }
 
+    public function rekap_ipl()
+    {
+        $list = DB::select("SELECT k.id_list, k.blok, i.home_no, MAX(CASE WHEN i.period = '2025-06-01' THEN i.status END) AS \"Juni\", MAX(CASE WHEN i.period = '2025-07-01' THEN i.status END) AS \"Juli\", MAX(CASE WHEN i.period = '2025-08-01' THEN i.status END) AS \"Agustus\", MAX(CASE WHEN i.period = '2025-09-01' THEN i.status END) AS \"September\", MAX(CASE WHEN i.period = '2025-10-01' THEN i.status END) AS \"Oktober\", MAX(CASE WHEN i.period = '2025-11-01' THEN i.status END) AS \"November\", MAX(CASE WHEN i.period = '2025-12-01' THEN i.status END) AS \"Desember\"
+            FROM komplek k
+            LEFT JOIN ipl i ON i.home_no = k.no
+            WHERE i.status IN ('Lunas','Pengecekan Admin')
+            GROUP BY k.id_list,k.blok,i.home_no
+            ORDER BY k.id_list ASC");
+        return view('rekap_ipl', [
+            'list' => $list
+        ]);
+    }
+
     public function laporan_keuangan()
     {
                   
