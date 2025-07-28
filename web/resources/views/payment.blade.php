@@ -102,7 +102,6 @@
                     <div class="payment-details">
                         
                         <table>
-                            <tr>
                                 <td style="padding:10px 0px 0px 0px;">Pembayaran Kebersihan</td>
                                 <td style="padding:10px 0px 0px 0px;">:</td>
                                 <td></td>
@@ -112,7 +111,13 @@
                                 <td style="padding:10px 0px 0px 0px;">Pembayaran Keamanan</td>
                                 <td style="padding:10px 0px 0px 0px;">:</td>
                                 <td></td>
-                                <td style="padding:10px 0px 0px 10px;">Rp. <strong>25.000</strong></td>
+                                <td style="padding:10px 0px 0px 10px;">Rp. <strong>75.000</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:10px 0px 0px 0px;">Penerangan Jalan Umum</td>
+                                <td style="padding:10px 0px 0px 0px;">:</td>
+                                <td></td>
+                                <td style="padding:10px 0px 0px 10px;">Rp. <strong>10.000</strong></td>
                             </tr>
                             <tr>
                                 <td style="padding:10px 0px 20px 0px;">Kas Warga</td>
@@ -127,7 +132,7 @@
                                 <td style="padding:20px 0px 0px 0px;"><strong>Total Iuran</strong></td>
                                 <td style="padding:20px 0px 0px 0px;">:</td>
                                 <td></td>
-                                <td style="padding:20px 0px 0px 10px;">Rp. <strong>65.000</strong></td>
+                                <td style="padding:20px 0px 0px 10px;">Rp. <strong>125.000</strong></td>
                             </tr>
                         </table>
                     </div>
