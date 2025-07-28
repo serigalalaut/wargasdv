@@ -301,7 +301,6 @@
                             <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
                             <td>
                               @if($item->is_deposit == 2) <p>Kosong</p>  
-                              @elseif($item->is_deposit == 3) <b>Deposit</b> 
                               @elseif($item->is_deposit == 0) <b>@if($item->is_addon == 1) + {{ $item->note }} @endif</b>
                               @endif
                             </td>
