@@ -302,10 +302,10 @@
                             <td>
                               @if($item->is_deposit == 2) <p>Kosong</p>  
                               @elseif($item->is_deposit == 3) <b>Deposit</b>
-                              @elseif($item->is_deposit == 4) <b>+ Rapel dengan bulan Juni</b> 
+                              <!--@elseif($item->is_deposit == 4) <b>+ Rapel dengan bulan Juni</b> 
                               @elseif($item->is_deposit == 5) <b>+ Deposit 1 Bulan Kedepan</b>
                               @elseif($item->is_deposit == 6) <b>+ Deposit 2 Bulan Kedepan</b>
-                              @elseif($item->is_deposit == 7) <b>+ Deposit 1 Bulan Kedepan (Hanya Iuran Keamanan)</b>  
+                              @elseif($item->is_deposit == 7) <b>+ Deposit 1 Bulan Kedepan (Hanya Iuran Keamanan)</b> --> 
                               @elseif($item->is_deposit == 0) <b>@if($item->is_addon == 1) + {{ $item->note }} @endif</b>
                               @endif
                             </td>
