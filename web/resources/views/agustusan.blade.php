@@ -100,7 +100,6 @@
                     <tr>
                         <th rowspan="2">Nomor Rumah</th>
                         <th rowspan="2">Nominal</th>
-                        <th rowspan="2">Status</th>
                         
                     </tr>
                    
