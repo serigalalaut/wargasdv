@@ -119,7 +119,7 @@
                         @endif
                         <tr>
                             <td>@if($item->nominal > 80000) <b>{{ $item->no }}*</b> @else {{ $item->no }} @endif</td>
-                            <td>@if($item->nominal > 80000) <b>{{ $item->nominal }}</b> @else {{ $item->nominal }} @endif</td>
+                            <td>@if($item->nominal > 80000) <b>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</b> @else Rp. {{ number_format($item->nominal, 0, ',', '.') }} @endif</td>
                             <td>@if($item->nominal > 80000) <b>{{ $item->status }}</b> @else {{ $item->status }} @endif</td>
                         </tr>
                     @endforeach
