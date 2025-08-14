@@ -112,4 +112,19 @@ class SdvController extends Controller
         ]);
         return redirect()->back()->with('success', 'Aspirasi berhasil dikirim...');
     }
+
+    public function agustusan()
+    {
+        $total_warga = DB::table('iuran')->where('status','Lunas')->count();
+        $total = DB::table('iuran')->where('status','Lunas')->sum('nominal');
+        $list = DB::select("SELECT k.id_list, k.blok, k.no,i.status,i.nominal
+            FROM komplek k
+            LEFT JOIN iuran i ON i.home_no = k.no
+            ORDER BY k.id_list ASC");
+        return view('agustusan', [
+            'list' => $list,
+            'total_warga' => $total_warga,
+            'total' => $total
+        ]);
+    }
 }
