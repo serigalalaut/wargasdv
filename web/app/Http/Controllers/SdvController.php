@@ -71,7 +71,7 @@ class SdvController extends Controller
             $period = date('Y-m');
         }
 
-        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->get();
+        $pengeluaran = DB::table('laporan_keuangan')->where('type','pengeluaran')->whereRaw("TO_CHAR(period, 'yyyy-mm') = ?", [$period])->orderBy('transaction_date','asc')->get();
         return view('pengeluaran', ['pengeluaran' => $pengeluaran]);
     }
 
