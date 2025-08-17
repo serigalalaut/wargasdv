@@ -112,7 +112,7 @@
           </tr>
           @foreach ($pengeluaran as $item)
           <tr>
-            <td>{{ date('Y-m-d', strtotime($item->created_at)) }}</td>
+            <td>{{ date('Y-m-d', strtotime($item->transaction_date)) }}</td>
             <td>{{ $item->title }}</td>
             
             <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
