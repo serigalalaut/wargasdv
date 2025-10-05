@@ -279,7 +279,6 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>Nomor Rumah</th>
-                        <th>Nominal</th>
                         <th>Status</th>
                         <th>Keterangan</th>
                     </tr>
@@ -297,14 +296,12 @@
                         @endif
                         <tr>
                             <td>{{ $item->home_no == 'B1-02' ? $item->home_no . " (Keamanan + kas warga)": $item->home_no}}</td>
-                            <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
                             <td>{{ $item->status == 'Lunas' ? "Terkonfirmasi": "Belum Terkonfirmasi" }}</td>
                             <td>
                               @if($item->is_deposit == 2) <p>Kosong</p>  
                               @elseif($item->is_deposit == 0) <b>@if($item->is_addon == 1) + {{ $item->note }} @endif</b>
                               @endif
                             </td>
-                              
                         </tr>
                     @endforeach
                 </table>
