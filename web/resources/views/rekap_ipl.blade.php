@@ -74,8 +74,26 @@
       <div class="row">
         
         
-        
-        
+        <div class="col-sm-6 col-md-12">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{{ asset('assets/images/iuran.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Iuran Pengelolaan Lingkungan Bulan {{ date('F Y', strtotime(env('period'))) }}
+              </h5>
+              <br>
+              <p>
+              <h2><strong>Rp. {{ number_format($total, 0, ',', '.') }}</strong></h2>
+              <br>
+              Pembayaran Terkonfirmasi :<strong> {{$total_warga}} </strong> Warga <br>
+              Pembayaran Belum Terkonfirmasi :<strong> {{$total_warga_belum}} </strong> Warga <br>
+             
+            </p>
+            </div>
+          </div>
+        </div>
         <div class="col-sm-6 col-md-12" style="margin-top:15px">
         <h5>Rekap Pembayaran IPL</h5>
         <p style="font-size: 10px;"><i>jika menggunakan hp, scroll ke samping untuk melihat data selengkapnya</i></p>
