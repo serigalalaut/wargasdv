@@ -128,7 +128,7 @@
                             @endphp
                         @endif
                         <tr>
-                            <td>{{ $item->home_no }}</td>
+                            <td>{{ $item->home_no }} @if ($item->is_security == true) <i class="fa fa-info"><b> Keamanan Saja</b></i> @endif </td>
                             <td>{{ $item->Juni }}</td>
                             <td>{{ $item->Juli }}</td>
                             <td>{{ $item->Agustus }}</td>
